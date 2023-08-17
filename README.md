@@ -17,4 +17,4 @@
 
 ## Builds
 
-* Look at [releases](/releases) for HTML5, Windows, MacOS versions.
+* Look at [releases](https://github.com/olafrv/shopiwar/releases) for HTML5, Windows, MacOS versions.
