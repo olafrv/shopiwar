@@ -17,4 +17,7 @@
 
 ## Builds
 
-* Look at [releases](https://github.com/olafrv/shopiwar/releases) for HTML5, Windows, MacOS versions.
+> The .EXE build is wrongly detected as `Program:Win32/Wacapew.C!ml` virus.
+
+* Look at [releases](https://github.com/olafrv/shopiwar/releases) for HTML5, 
+Windows, MacOS versions created with [Microstudio IDE](https://microstudio.itch.io/).
