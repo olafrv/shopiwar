@@ -1,0 +1,213 @@
+<!DOCTYPE html><html><head><title>Shopiwar</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1"><meta charset="UTF-8"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content=""><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon64.png"><link rel="apple-touch-icon" sizes="180x180" href="icon180.png"><link rel="icon" type="image/png" sizes="32x32" href="icon32.png"><link rel="icon" type="image/png" sizes="16x16" href="icon16.png"><style>html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow:hidden;
+  font-family: Verdana;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#canvaswrapper {
+  text-align: center ;
+}
+</style><style>@font-face { font-family: "BitCell" ; src: url("fonts/BitCell.ttf") format("truetype"); }</style><script>window.fonts = ["BitCell"]</script></head><body class="noselect custom-cursor" oncontextmenu="return false;"><div id="canvaswrapper"></div><script type="text/javascript">var resources = {"images":[{"file":"explosion1.png","version":1,"size":3465,"properties":{}},{"file":"explosion2.png","version":1,"size":3529,"properties":{}},{"file":"icon.png","version":4,"size":2750,"properties":{"frames":1,"fps":5}},{"file":"jet.png","version":1,"size":2029,"properties":{}},{"file":"misile.png","version":1,"size":807,"properties":{}},{"file":"shopify.png","version":1,"size":1560,"properties":{}}],"assets":[],"maps":{"map":"{\"width\":24,\"height\":16,\"block_width\":16,\"block_height\":16,\"sprites\":[0],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}"},"sounds":[{"file":"missile.wav","version":1,"size":131674,"properties":{}}],"music":[{"file":"fluffingaduck.mp3","version":1,"size":2696840,"properties":{}}]};
+var graphics = "M1";
+
+</script><script type="text/javascript">var orientation = 'any' ;
+var aspect = 'free' ;
+var ms_libs = [] ;
+window.skip_service_worker = true;
+window.exported_project = true;
+window.ms_use_server = false ;
+</script><script src="compiler.js"></script><script src="parser.js"></script><script src="processor.js"></script><script src="program.js"></script><script src="routine.js"></script><script src="runner.js"></script><script src="token.js"></script><script src="tokenizer.js"></script><script src="transpiler.js"></script><script src="microengine.js"></script></body><script type="text/javascript">//
+//
+// The game is started with the code below.
+// Once you have received the "started" signal (see below),
+// you can do the following:
+// 1) Inject functions or objects into the global context of the microStudio engine, example:
+//
+//   window.player.setGlobal("special_callback",function(x) { console.info(x) }) ;
+//   // Your microScript code can now call the "special_callback" function
+//
+// 2) Call microScript global functions from your JavaScript code, example:
+//
+//   window.player.call("call_me_from_javascript",[10,1000]) ;
+//   // arguments to the function call are provided as an array
+//
+// 3) Run a microScript code snippet from your JavaScript code, example:
+//
+//   window.player.exec("player.position_x = 50",function(result) { console.log(result) ; }) ;
+//
+
+window.addEventListener("load",function() {
+  window.player = new Player(function(event) {
+    if (event.name == "started") {
+      // signal that the game is started
+    }
+    else if (event.name == "log") {
+      // console.info(event.data) ;
+    }
+  }) ;
+  document.body.focus() ;
+}) ;
+
+</script><script id="code" type="text/x-microscript">
+
+
+function()
+MySprite = class
+  destroyed = false
+  constructor = function(id, name)
+    global sprites
+    this.id = id
+    this.x = 0
+    this.y = 0
+    this.w = sprites[name].width
+    this.h = sprites[name].height
+    this.name = name
+    this.step = 5
+  end
+  collision = function(my_sprite)
+    distance = floor(sqrt(pow(this.x - my_sprite.x,2)+ pow(this.y - my_sprite.y,2)))
+    distance_min = floor(max(this.w,this.h)/2 + max(my_sprite.w, my_sprite.h)/2)
+    if distance <= distance_min then
+      return true
+    else
+      return false
+    end
+  end
+end
+
+Friend = class extends MySprite
+  constructor = function(id, name)
+    super(id, name)
+    this.w = 48
+    this.h = 48
+  end
+  left = function()
+    this.x -= this.step
+  end
+  right = function()
+    this.x += this.step
+  end
+  down = function()
+    this.y -= this.step
+  end
+  up = function()
+    this.y += this.step
+  end
+end
+
+Misile = class extends MySprite
+  constructor = function(id, name, x, y)
+    super(id, name)
+    this.x = x
+    this.y = y
+    this.step = 10
+    this.w = 24
+    this.h = 24
+    flying = every 50 do
+      this.fly()
+    end
+  end
+  fly = function()
+    if this.destroyed == false then
+      if this.y + this.step < floor(screen.height/2) then
+        this.y += this.step
+      else
+        this.flying.stop()
+        this.destroyed = true
+      end
+    end
+  end
+end
+
+Enemy = class extends MySprite
+  constructor = function(id, name)
+    super(id, name)
+  end
+  update_position = function()
+      xd = random.nextInt(2)
+      if xd == 1 then
+        xd = 1
+      else
+        xd = -1
+      end
+      this.x = random.nextInt(floor(screen.width/2)) * xd
+      this.y = random.nextInt(floor(screen.height/2))
+  end
+end
+
+end()
+
+
+
+function()
+init = function()
+  global kills = 0
+  global entities = []
+  global misiles = []
+  global jet =  new Friend("j1", "jet")
+  global enemy = new Enemy("s1", "shopify")
+  audio.playMusic("fluffingaduck", 0.2, 1)
+  entities.push(jet)
+  entities.push(enemy)
+  thread = every 1500 do
+    enemy.update_position()
+  end
+end
+
+update = function()
+  global jet
+  global misiles
+  global enemy
+  local mouse_x = floor(mouse.x)
+  local mouse_y = floor(mouse.y)
+  jet.x = mouse_x
+  jet.y = mouse_y
+  for m in misiles
+    if m.collision(enemy) then
+      m.destroyed = true
+      enemy.destroyed = true
+    end
+  end
+  if mouse.left == 1 then
+    misile = new Misile("m", "misile", mouse_x, mouse_y)
+    audio.playSound("missile", 1, 1, 0, 0)
+    misiles.push(misile)
+    entities.push(misile)
+  end
+end
+
+draw = function()
+  global entities
+  global misiles
+  global kills
+  screen.clear()
+  screen.drawText("Hits: " + kills, screen.width/2-75,screen.height/2-20, 30, "#FFF")
+  for i in entities
+    if i.destroyed then
+      if i.name == "shopify" then
+        screen.drawSprite("explosion2", i.x, i.y, sprites["explosion2"].width, sprites["explosion2"].height)
+        i.destroyed = false
+        kills += 1
+      elsif i.name == "misile" then
+        screen.drawSprite("explosion1", i.x, i.y, sprites["explosion1"].width, sprites["explosion1"].height)
+        entities.removeElement(i)
+        misiles.removeElement(i)
+      end
+    else
+      screen.drawSprite(i.name, i.x, i.y, i.w, i.h)
+    end
+  end
+end
+end()
+
+
+</script></html>
